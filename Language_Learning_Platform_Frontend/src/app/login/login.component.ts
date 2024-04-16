@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormGroup, FormBuilder, Validators, ReactiveFormsModule } from '@angular/forms';
 import { AuthService } from '../auth.service';
+
 @Component({
   selector: 'app-login',
   standalone: true,
@@ -13,7 +14,7 @@ export class LoginComponent {
 
   constructor(private authService: AuthService, private formBuilder: FormBuilder) {
     this.loginForm = this.formBuilder.group({
-      email: ['', Validators.required],
+      username: ['', Validators.required],
       password: ['', Validators.required]
     });
   }
