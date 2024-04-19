@@ -1,0 +1,32 @@
+{
+  "userData": [
+    {
+      "username": "new_user",
+      "email": "expert@language.com",
+      "password": "another_secure_placeholder",
+      "first_name": "John",
+      "last_name": "Doe",
+      "native_language": "xx",
+      "avatar_url": "https://www.example.com/profile_pics/john_doe.png",
+      "target_languages": [
+        "notalanguage"
+      ]
+    },
+    {
+      "id": "2a9f",
+      "email": "ashwini@gmail.com",
+      "username": "ash",
+      "password": "123456",
+      "firstName": "Ashwini",
+      "lastName": "Khandagale",
+      "nativeLanguage": "Marathi",
+      "targetLanguages": "English",
+      "avatarUrl": ""
+    },
+    {
+      "id": "8a5e",
+      "username": "ash",
+      "password": "123456"
+    }
+  ]
+}
