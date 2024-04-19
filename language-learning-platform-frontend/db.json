@@ -27,6 +27,17 @@
       "id": "8a5e",
       "username": "ash",
       "password": "123456"
+    },
+    {
+      "id": "4a1d",
+      "username": "akhandagale",
+      "email": "khandagale.ashwini410@gmail.com",
+      "password": "12345",
+      "firstName": "Ashwini",
+      "lastName": "Khandagale",
+      "nativeLanguage": "Marathi",
+      "targetLanguages": "Hindi",
+      "avatarUrl": ""
     }
   ]
 }

@@ -1,1 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
+.login-container, .registration-container {
+    background-image: url('./assets/logo.png'); /* Replace with your image path */
+    background-size: cover; /* Stretch image to cover container */
+    background-repeat: no-repeat; /* Prevent image tiling */
+    background-position: center; /* Center image horizontally and vertically */
+    min-height: 100vh; /* Ensure background fills viewport height */
+    display: flex; /* Allow vertical centering of content */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+  }
