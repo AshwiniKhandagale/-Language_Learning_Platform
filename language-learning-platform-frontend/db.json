@@ -10,7 +10,8 @@
       "avatar_url": "https://www.example.com/profile_pics/john_doe.png",
       "target_languages": [
         "notalanguage"
-      ]
+      ],
+      "id": "3cbc"
     },
     {
       "id": "2a9f",
@@ -38,6 +39,206 @@
       "nativeLanguage": "Marathi",
       "targetLanguages": "Hindi",
       "avatarUrl": ""
+    },
+    {
+      "id": "c722",
+      "username": "akhandagale",
+      "password": "12345"
+    },
+    {
+      "id": "154d",
+      "username": "akhandagale",
+      "password": "12345"
+    },
+    {
+      "id": "d165",
+      "username": "akhandagale",
+      "password": "12345"
+    },
+    {
+      "id": "ec45",
+      "username": "akhandagale",
+      "password": "12345"
+    },
+    {
+      "id": "2ba2",
+      "username": "akhandagale",
+      "password": "12345"
+    },
+    {
+      "id": "72eb",
+      "username": "abc",
+      "email": "abc@gmail.com",
+      "password": "123456",
+      "firstName": "ashwini",
+      "lastName": "Dukare ",
+      "nativeLanguage": "Marathi",
+      "targetLanguages": "Hindi",
+      "avatarUrl": ""
+    },
+    {
+      "id": "ef9c",
+      "username": "abc",
+      "password": "123456"
+    }
+  ],
+  "languages": [
+    {
+      "id": "6",
+      "name": "Italian",
+      "level": "Intermediate",
+      "iconUrl": "https://example.com/italian-icon.png",
+      "wishlist": false
+    },
+    {
+      "id": "7",
+      "name": "Japanese",
+      "level": "Intermediate",
+      "iconUrl": "https://example.com/japanese-icon.png",
+      "wishlist": false
+    },
+    {
+      "id": "8",
+      "name": "Arabic",
+      "level": "Beginner",
+      "iconUrl": "https://example.com/arabic-icon.png",
+      "wishlist": false
+    },
+    {
+      "id": "9",
+      "name": "Russian",
+      "level": "Advanced",
+      "iconUrl": "https://example.com/russian-icon.png",
+      "wishlist": false
+    },
+    {
+      "id": "10",
+      "name": "Portuguese",
+      "level": "Intermediate",
+      "iconUrl": "https://example.com/portuguese-icon.png",
+      "wishlist": false
+    },
+    {
+      "id": "11",
+      "name": "Korean",
+      "level": "Beginner",
+      "iconUrl": "https://example.com/korean-icon.png",
+      "wishlist": false
+    },
+    {
+      "id": "12",
+      "name": "Dutch",
+      "level": "Intermediate",
+      "iconUrl": "https://example.com/dutch-icon.png",
+      "wishlist": false
+    },
+    {
+      "id": "13",
+      "name": "Swedish",
+      "level": "Advanced",
+      "iconUrl": "https://example.com/swedish-icon.png",
+      "wishlist": false
+    },
+    {
+      "id": "14",
+      "name": "Turkish",
+      "level": "Intermediate",
+      "iconUrl": "https://example.com/turkish-icon.png",
+      "wishlist": false
+    },
+    {
+      "id": "15",
+      "name": "Polish",
+      "level": "Beginner",
+      "iconUrl": "https://example.com/polish-icon.png",
+      "wishlist": false
+    },
+    {
+      "id": "16",
+      "name": "Norwegian",
+      "level": "Intermediate",
+      "iconUrl": "https://example.com/norwegian-icon.png",
+      "wishlist": false
+    },
+    {
+      "id": "17",
+      "name": "Danish",
+      "level": "Advanced",
+      "iconUrl": "https://example.com/danish-icon.png",
+      "wishlist": false
+    },
+    {
+      "id": "18",
+      "name": "Finnish",
+      "level": "Intermediate",
+      "iconUrl": "https://example.com/finnish-icon.png",
+      "wishlist": false
+    },
+    {
+      "id": "19",
+      "name": "Greek",
+      "level": "Beginner",
+      "iconUrl": "https://example.com/greek-icon.png",
+      "wishlist": false
+    },
+    {
+      "id": "20",
+      "name": "Hindi",
+      "level": "Intermediate",
+      "iconUrl": "https://example.com/hindi-icon.png",
+      "wishlist": false
+    },
+    {
+      "id": "21",
+      "name": "Indonesian",
+      "level": "Advanced",
+      "iconUrl": "https://example.com/indonesian-icon.png",
+      "wishlist": false
+    },
+    {
+      "id": "22",
+      "name": "Malay",
+      "level": "Intermediate",
+      "iconUrl": "https://example.com/malay-icon.png",
+      "wishlist": false
+    },
+    {
+      "id": "23",
+      "name": "Thai",
+      "level": "Beginner",
+      "iconUrl": "https://example.com/thai-icon.png",
+      "wishlist": false
+    },
+    {
+      "id": "24",
+      "name": "Vietnamese",
+      "level": "Intermediate",
+      "iconUrl": "https://example.com/vietnamese-icon.png",
+      "wishlist": false
+    },
+    {
+      "id": "25",
+      "name": "Czech",
+      "level": "Advanced",
+      "iconUrl": "https://example.com/czech-icon.png",
+      "wishlist": false
+    }
+  ],
+  "selectedLanguages": [
+    {
+      "id": "1",
+      "name": "Italian",
+      "level": "Intermediate"
+    },
+    {
+      "id": "6bfe",
+      "language": "8",
+      "level": "Beginner"
+    },
+    {
+      "id": "b745",
+      "language": "11",
+      "level": "Beginner"
     }
   ]
 }

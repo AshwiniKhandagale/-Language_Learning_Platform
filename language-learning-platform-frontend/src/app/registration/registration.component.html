@@ -1,6 +1,7 @@
-<div class=" registration-container  d-flex justify-content-center align-items-center vh-100">
-    <div class="row justify-content-center  mt-5">
-      <div class="col-md-6 col-lg-10">  <div class="card border-primary shadow p-3 mb-5 bg-white rounded">
+<div class="registration-container d-flex justify-content-center align-items-center vh-100">
+    <div class="row justify-content-center mt-5">
+      <div class="col-md-6 col-lg-10">
+        <div class="card border-primary shadow p-3 mb-5 bg-white rounded">
           <div class="card-header text-center text-primary fw-bold">Registration Form</div>
           <div class="card-body">
             <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
@@ -17,7 +18,8 @@
                 <input type="password" class="form-control" formControlName="password" id="password" placeholder="Enter password">
               </div>
               <div class="row">
-                <div class="col-md-6 mb-3">  <label for="firstName" class="form-label">First Name</label>
+                <div class="col-md-6 mb-3">
+                  <label for="firstName" class="form-label">First Name</label>
                   <input type="text" class="form-control" formControlName="firstName" id="firstName" placeholder="Enter first name">
                 </div>
                 <div class="col-md-6 mb-3">
@@ -39,6 +41,7 @@
               </div>
               <div class="text-center mt-3">
                 <button type="submit" class="btn btn-primary">Register</button>
+                <a routerLink="/" class="btn btn-secondary">Back to Login</a>
               </div>
             </form>
           </div>

@@ -1,0 +1,61 @@
+<style>
+    .card {
+      height: 100%;
+    }
+  
+    .card-header {
+      background-color: #6c757d; /* Change to your desired header color */
+      color: white;
+    }
+    .custom-header-color {
+    background-color: white;
+    color: #9E0000; /* Brown text color */
+    padding: 10px 0; /* Add some padding for better appearance */
+    margin-bottom: 20px; /* Add margin to separate from other content */
+  }
+  </style>
+  
+  <div class="dashboard-container d-flex flex-column min-vh-100">
+    <div class="container mt-5">
+      <h1 class="text-center custom-header-color">Language Learning Dashboard</h1>
+      <div class="row mt-3">
+        <div class="col-md-3">
+          <div class="card">
+            <div class="card-header">Language Selection</div>
+            <div class="card-body">
+              <p class="card-text">Empower users to select their desired language(s) from a comprehensive list of supported languages.</p>
+              <a routerLink="/language-selection" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card">
+            <div class="card-header">Learning Materials</div>
+            <div class="card-body">
+              <p class="card-text">Access a diverse range of learning resources, including vocabulary lists, comprehensive grammar explanations, engaging audio recordings, informative videos, and interactive lessons.</p>
+              <a routerLink="/learning-materials" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card">
+            <div class="card-header">Language Assessments</div>
+            <div class="card-body">
+              <p class="card-text">Utilize standardized language proficiency tests and assessments to gauge your current language skills and monitor your progress over time.</p>
+              <a routerLink="/language-assessments" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card">
+            <div class="card-header">Progress Tracking</div>
+            <div class="card-body">
+              <p class="card-text">Visualize your language learning journey through intuitive charts, graphs, and insightful statistics.</p>
+              <a routerLink="/progress-tracking" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

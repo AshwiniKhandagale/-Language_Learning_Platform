@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators, ReactiveFormsModule } from '@angular/forms';
 import { AuthService } from '../auth.service';
+import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-registration',
   templateUrl: './registration.component.html',
@@ -9,7 +11,7 @@ import { AuthService } from '../auth.service';
 export class RegistrationComponent implements OnInit {
   registrationForm: FormGroup | any;
   registrationSuccess = false;
-  constructor(private formBuilder: FormBuilder,private authService: AuthService) { }
+  constructor(private formBuilder: FormBuilder,private authService: AuthService,private router: Router) { }
 
   ngOnInit(): void {
     this.registrationForm = this.formBuilder.group({
@@ -35,6 +37,7 @@ export class RegistrationComponent implements OnInit {
         response => {
           console.log('Registration successful!', response); 
           this.registrationSuccess = true// Handle successful registration (e.g., redirect to login)
+          this.router.navigate(['/login']);
         },
         error => {
           console.error('Registration failed:', error); // Handle registration errors (e.g., display error messages)

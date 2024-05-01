@@ -9,3 +9,19 @@
     justify-content: center; /* Center content horizontally */
     align-items: center; /* Center content vertically */
   }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.dashboard-container {
+  background-image: url('./assets/logo.png');
+  background-size: cover; background-attachment: fixed;
+
+}
+.dashboard-container h1 {
+  color: blue;
+}
+.language-selection-container {
+
+  background-size: cover; background-attachment: fixed;
+
+}
