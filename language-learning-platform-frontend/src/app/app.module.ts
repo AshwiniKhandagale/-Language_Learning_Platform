@@ -13,6 +13,7 @@ import { AppLanguageAssessmentsComponent } from './app-language-assessments/app-
 import { AppProgressTrackingComponent } from './app-progress-tracking/app-progress-tracking.component';
 import { MatIconModule } from '@angular/material/icon';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AppChallengesGamesComponent } from './app-challenges-games/app-challenges-games.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +23,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AppLanguageSelectionComponent,
     AppLearningMaterialsComponent,
     AppLanguageAssessmentsComponent,
-    AppProgressTrackingComponent
+    AppProgressTrackingComponent,
+    AppChallengesGamesComponent
   ],
   imports: [
     BrowserModule,

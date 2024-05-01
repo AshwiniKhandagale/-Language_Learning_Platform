@@ -7,6 +7,7 @@ import { AppLanguageSelectionComponent } from './app-language-selection/app-lang
 import { AppLearningMaterialsComponent } from './app-learning-materials/app-learning-materials.component';
 import { AppLanguageAssessmentsComponent } from './app-language-assessments/app-language-assessments.component';
 import { AppProgressTrackingComponent } from './app-progress-tracking/app-progress-tracking.component';
+import { AppChallengesGamesComponent } from './app-challenges-games/app-challenges-games.component';
 
 const routes: Routes = [
   { path: '', component: LoginComponent },
@@ -16,6 +17,7 @@ const routes: Routes = [
   { path: 'learning-materials', component: AppLearningMaterialsComponent },
   { path: 'language-assessments', component: AppLanguageAssessmentsComponent },
   { path: 'progress-tracking', component: AppProgressTrackingComponent },
+  { path: 'challenges-games', component: AppChallengesGamesComponent },
   // Add other routes for your application
   { path: '', redirectTo: '/login', pathMatch: 'full' }
 ];
