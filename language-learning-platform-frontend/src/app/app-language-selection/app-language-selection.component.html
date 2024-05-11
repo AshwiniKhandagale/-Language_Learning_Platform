@@ -4,7 +4,7 @@
     <form [formGroup]="languageForm" (ngSubmit)="onSubmit()" class="col-lg-6">
         <div class="form-group col-lg-6">
             <label for="language">Language</label>
-            <select formControlName="language" id="language" class="form-select form-select-lg bg-transparent border-0 shadow-sm">
+            <select formControlName="name" id="language" class="form-select form-select-lg bg-transparent border-0 shadow-sm">
                 <option *ngFor="let lang of languages" [value]="lang.name">{{ lang.name }}</option>
             </select>
         </div>

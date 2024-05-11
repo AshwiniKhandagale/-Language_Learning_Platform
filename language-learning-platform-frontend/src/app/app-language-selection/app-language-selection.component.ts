@@ -11,7 +11,7 @@ export class AppLanguageSelectionComponent implements OnInit {
   languages: Language[] = [];
   filteredLanguages: Language[] = [];
   searchQuery: string = '';
-  selectedLanguages: Language[] = [];
+  selectedLanguages:any;
   languageForm!: FormGroup ;
 
   constructor(private languageService: LanguageService,private formBuilder: FormBuilder) { }
@@ -29,7 +29,7 @@ export class AppLanguageSelectionComponent implements OnInit {
         
       });
       this.languageForm = this.formBuilder.group({
-        language: ['', Validators.required],
+        name: ['', Validators.required],
         level: ['', Validators.required]
       });
       
@@ -41,7 +41,7 @@ export class AppLanguageSelectionComponent implements OnInit {
       this.languageService.addLanguageInWishList(formData).subscribe(response => {
         console.log('POST request successful:', response);
         // Assuming the response is an array of languages
-        this.selectedLanguages = response;
+        this.selectedLanguages.push(response);
         // Handle response as needed
     }, error => {
         console.error('Error occurred:', error);

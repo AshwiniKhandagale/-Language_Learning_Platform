@@ -87,9 +87,15 @@
       "password": "12345"
     },
     {
+<<<<<<< Updated upstream
       "id": "fbb9",
       "username": "ash",
       "password": "123456"
+=======
+      "id": "6d5d",
+      "username": "akhandagale",
+      "password": "12345"
+>>>>>>> Stashed changes
     }
   ],
   "languages": [
@@ -241,13 +247,18 @@
       "level": "Intermediate"
     },
     {
-      "id": "6bfe",
-      "language": "8",
-      "level": "Beginner"
+      "id": "3191",
+      "name": "Japanese",
+      "level": "Intermediate"
     },
     {
-      "id": "b745",
-      "language": "11",
+      "id": "2752",
+      "name": "Japanese",
+      "level": "Intermediate"
+    },
+    {
+      "id": "7c2a",
+      "name": "Portuguese",
       "level": "Beginner"
     },
     {
