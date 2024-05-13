@@ -7,50 +7,43 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   templateUrl: './app-language-selection.component.html',
   styleUrls: ['./app-language-selection.component.css']
 })
-export class AppLanguageSelectionComponent implements OnInit {
-  languages: Language[] = [];
-  filteredLanguages: Language[] = [];
-  searchQuery: string = '';
-  selectedLanguages:any;
-  languageForm!: FormGroup ;
+export class AppLanguageSelectionComponent  implements OnInit {
+  foreignLanguage: any;
+  baseLanguage: any;
+  languages: any;
 
-  constructor(private languageService: LanguageService,private formBuilder: FormBuilder) { }
-
-
+  constructor(private languageService: LanguageService) { }
   ngOnInit(): void {
+    this.getLanguages();
+  }
+
+  setupLanguages(): void {
+    const data = { foreignLanguage: this.foreignLanguage, baseLanguage: this.baseLanguage };
+    this.languageService.setupLanguages(data)
+      .subscribe(
+        response => {
+          console.log('Language setup successful:', response);
+         
+          // Optionally, you can perform any additional logic here
+        },
+        error => {
+          console.error('Error setting up languages:', error);
+        }
+      );
+  }
+
+  getLanguages(): void {
     this.languageService.getLanguages()
-      .subscribe(languages => {
-        this.languages = languages;
-        
-      });
-      // this.languageService.getselectedLanguages()
-      // .subscribe(languages => {
-      //   this.selectedLanguages = languages;
-        
-      // });
-      this.languageForm = this.formBuilder.group({
-        name: ['', Validators.required],
-        level: ['', Validators.required]
-      });
-      
+      .subscribe(
+        response => {
+          console.log('Supported languages:', response);
+          this.languages = response.results;
+        },
+        error => {
+          console.error('Error getting supported languages:', error);
+        }
+      );
   }
-  onSubmit(){
-  
-    if (this.languageForm.valid) {
-      const formData = this.languageForm.value;
-      this.languageService.addLanguageInWishList(formData).subscribe(response => {
-        console.log('POST request successful:', response);
-        // Assuming the response is an array of languages
-        this.selectedLanguages.push(response);
-        // Handle response as needed
-    }, error => {
-        console.error('Error occurred:', error);
-        // Handle error as needed
-    });
-    }
-  }
-
-
  
 
 }

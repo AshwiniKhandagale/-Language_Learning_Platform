@@ -9,15 +9,19 @@ import { Material } from './app-learning-materials/material.model';
 })
 export class LanguageService {
   private readonly BASE_URL = 'http://localhost:3000';
-  private readonly LANGUAGES_URL = `${this.BASE_URL}/languages`;
+  private readonly LANGUAGES_URL = `${this.BASE_URL}/admin/languages`;
   private readonly SELECTED_LANGUAGES_URL = `${this.BASE_URL}/selectedLanguages`;
   private readonly LEARNING_MATERIALS_ADMIN_URL = `${this.BASE_URL}/admin/learning-materials`;
   private readonly LEARNING_MATERIALS_USER_URL = `${this.BASE_URL}/user/learning-materials`;
 
   constructor(private http: HttpClient) { }
 
-  getLanguages(): Observable<Language[]> {
-    return this.http.get<Language[]>(this.LANGUAGES_URL);
+  setupLanguages(data: any): Observable<any> {
+    return this.http.post<any>(this.LANGUAGES_URL, data);
+  }
+
+  getLanguages(): Observable<any> {
+    return this.http.get<any>(this.LANGUAGES_URL);
   }
 
   addLanguageInWishList(language: Language): Observable<Language> {
@@ -43,9 +47,7 @@ export class LanguageService {
 
     return this.http.get<any>(this.LEARNING_MATERIALS_USER_URL, { params });
   }
-  createAssessment(params: any): Observable<any> {
-    return this.http.get<any>(`${this.BASE_URL}/user/create-assessment`, { params });
-  }
+ 
 
   getAssessments(): Observable<any> {
     return this.http.get<any>(`${this.BASE_URL}/user/assessments`);
@@ -76,5 +78,16 @@ signUpForChallenge(challenge_id: any, languageId: string, count: number, duratio
 
     return this.http.get<any>(`${this.BASE_URL}/user/create-assessment`, { params: params });
 }
+createAssessment(languageId: string, count: number, durationAllowed: number, difficultyLevel: string) {
+ 
+  const params = new HttpParams()
+    .set('languageId', languageId)
+    .set('count', count.toString())
+    .set('durationAllowed', durationAllowed.toString())
+    .set('difficultyLevel', difficultyLevel);
+
+  return this.http.get<any>(`${this.BASE_URL}/user/create-assessment`, { params });
+}
+
   
 }

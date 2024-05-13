@@ -1,1 +1,23 @@
-<p>create-assessment works!</p>
+<div class="container">
+    <h2>Create Assessment</h2>
+    <form (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="languageId">Language ID</label>
+        <input type="text" class="form-control" id="languageId" [(ngModel)]="languageId" name="languageId">
+      </div>
+      <div class="form-group">
+        <label for="count">Count</label>
+        <input type="number" class="form-control" id="count" [(ngModel)]="count" name="count">
+      </div>
+      <div class="form-group">
+        <label for="durationAllowed">Duration Allowed</label>
+        <input type="number" class="form-control" id="durationAllowed" [(ngModel)]="durationAllowed" name="durationAllowed">
+      </div>
+      <div class="form-group">
+        <label for="difficultyLevel">Difficulty Level</label>
+        <input type="text" class="form-control" id="difficultyLevel" [(ngModel)]="difficultyLevel" name="difficultyLevel">
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+  

@@ -1,1 +1,30 @@
-<p>view-assessments works!</p>
+<div class="container">
+    <h2>Assessments</h2>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Assessment ID</th>
+          <th>Start Time</th>
+          <th>End Time</th>
+          <th>Duration Allowed</th>
+          <th>Difficulty Level</th>
+          <th>Progress</th>
+          <th>Foreign Language</th>
+          <th>Base Language</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let assessment of assessments">
+          <td>{{ assessment.assessment_id }}</td>
+          <td>{{ assessment.start_time }}</td>
+          <td>{{ assessment.end_time }}</td>
+          <td>{{ assessment.duration_allowed }}</td>
+          <td>{{ assessment.difficulty_level }}</td>
+          <td>{{ assessment.progress }}</td>
+          <td>{{ assessment.foreign_language }}</td>
+          <td>{{ assessment.base_language }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

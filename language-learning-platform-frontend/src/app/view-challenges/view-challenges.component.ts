@@ -11,6 +11,7 @@ export class ViewChallengesComponent implements OnInit {
   assessmentQuestions: any;
   showAssessmentQuestions:any;
   assessmentId:any;
+  leaderboard: any[] = [];
   constructor(private challengeService: LanguageService) { }
 
   ngOnInit(): void {
@@ -74,7 +75,17 @@ export class ViewChallengesComponent implements OnInit {
   
   viewLeaderboard(challengeId: string): void {
     // Implement your view leaderboard logic here
-    console.log('Viewing leaderboard for challenge:', challengeId);
+    this.challengeService.getLeaderboard(challengeId).subscribe(
+      (data) => {
+        this.leaderboard = data.leaderboard;
+        
+      },
+      (error) => {
+        console.error('Error retrieving leaderboard:', error);
+        // Handle errors
+      }
+    );
   }
+ 
 
 }

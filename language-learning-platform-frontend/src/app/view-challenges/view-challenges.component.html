@@ -20,8 +20,24 @@
               <button class="btn btn-primary" (click)="submitAssessment(question)">Submit</button>
             </div>
             
+            
           </div>
-          
+          <table class="table" *ngIf="leaderboard">
+            <thead>
+              <tr>
+                <th>Rank</th>
+                <th>Name</th>
+                <th>Score</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let entry of leaderboard">
+                <td>{{ entry.rank }}</td>
+                <td>{{ entry.first_name }} {{ entry.last_name }}</td>
+                <td>{{ entry.progress }} / {{ entry.total_questions }}</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
     </div>
@@ -29,4 +45,30 @@
       <p>No challenges available.</p>
     </ng-template>
   </div>
-  
+  <!-- Add this modal code inside your existing HTML template -->
+<ng-template #leaderboardModal let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title">Leaderboard</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Rank</th>
+          <th>Name</th>
+          <th>Score</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let entry of leaderboard">
+          <td>{{ entry.rank }}</td>
+          <td>{{ entry.first_name }} {{ entry.last_name }}</td>
+          <td>{{ entry.progress }} / {{ entry.total_questions }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</ng-template>

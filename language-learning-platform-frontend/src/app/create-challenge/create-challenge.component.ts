@@ -12,7 +12,7 @@ export class CreateChallengeComponent implements OnInit {
 
   constructor(private formBuilder: FormBuilder, private challengeService: LanguageService) {
     this.challengeForm = this.formBuilder.group({
-      languageId: ['b493c87b-c592-4980-91dd-5e79306af0a3', Validators.required],
+      languageId: ['3d73a729-da10-4568-b0b2-cccd0aa4a367', Validators.required],
       challengeName: ['', Validators.required],
       difficultyLevel: ['beginner'],
       startDate: ['', Validators.required],
