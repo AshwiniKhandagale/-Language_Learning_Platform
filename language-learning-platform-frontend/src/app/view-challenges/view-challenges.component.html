@@ -1,0 +1,32 @@
+<div class="container">
+    <h2>Challenges</h2>
+    <div *ngIf="challenges && challenges.length > 0; else noChallenges">
+      <div *ngFor="let challenge of challenges" class="card mb-3">
+        <div class="card-header">
+          <h5 class="card-title">{{ challenge.challenge_name }}</h5>
+          <p class="card-text">Difficulty: {{ challenge.difficulty_level }}</p>
+        </div>
+        <div class="card-body">
+          <p class="card-text">Start Time: {{ challenge.start_time | date: 'medium' }}</p>
+          <p class="card-text">End Time: {{ challenge.end_time | date: 'medium' }}</p>
+          <p class="card-text">Status: {{ challenge.status }}</p>
+          <button class="btn btn-primary" (click)="signUpForChallenge(challenge)">Sign Up</button>
+          <button class="btn btn-secondary" (click)="viewLeaderboard(challenge.challenge_id)">View Leaderboard</button>
+          <div *ngIf="showAssessmentQuestions">
+            <h3>Assessment Questions</h3>
+            <div *ngFor="let question of assessmentQuestions">
+              <p>{{ question.base_word }}</p>
+              <input type="text" [(ngModel)]="question.userAnswer" placeholder="Enter your answer">
+              <button class="btn btn-primary" (click)="submitAssessment(question)">Submit</button>
+            </div>
+            
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    <ng-template #noChallenges>
+      <p>No challenges available.</p>
+    </ng-template>
+  </div>
+  

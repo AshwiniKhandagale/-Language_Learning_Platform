@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder, Validators, ReactiveFormsModule } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AuthService } from '../auth.service';
 import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -10,15 +11,17 @@ import { Router } from '@angular/router';
 export class LoginComponent implements OnInit {
 
   loginForm: FormGroup;
- 
+
   constructor(private authService: AuthService, private formBuilder: FormBuilder, private router: Router) {
     this.loginForm = this.formBuilder.group({
-      username: ['', Validators.required],
+      email: ['', [Validators.required, Validators.email]],
       password: ['', Validators.required]
     });
   }
+
   ngOnInit(): void {
   }
+
   onSubmit() {
     if (this.loginForm.invalid) {
       return;
@@ -26,13 +29,12 @@ export class LoginComponent implements OnInit {
 
     this.authService.loginUser(this.loginForm.value).subscribe(response => {
       console.log('Login successful!', response);
+      alert(response.message)
       this.router.navigate(['/dashboard']);
     }, error => {
-       console.error('Login failed:', error);
+      console.error('Login failed:', error);
       // Handle login error
     });
   }
-
-
 
 }

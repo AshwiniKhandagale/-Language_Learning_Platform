@@ -1,38 +1,56 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
-import { catchError } from 'rxjs/operators';
-const LOGIN_URL = 'http://localhost:3000/userData';
-const REGISTER_URL = 'http://localhost:3000/userData';
+import { catchError, tap } from 'rxjs/operators';
+import { AnonymousSubject } from 'rxjs/internal/Subject';
+
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
- 
-
+  private apiUrl = 'http://localhost:3000'; 
+  private token: any;
+  private userType:any;
   constructor(private http: HttpClient) { }
 
-  loginUser(credentials: { username: string; password: string }): Observable<any> {
+  loginUser(credentials: { email: string; password: string }): Observable<any> {
     const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
-    const body = credentials; 
+    const body = credentials;
 
-    return this.http.post(LOGIN_URL, body, { headers })
-      .pipe(
-        catchError(this.handleError) 
-      );
+    return this.http.post<any>(`${this.apiUrl}/login`, body, { headers }).pipe(
+      tap(response => {
+        this.token = response.token; // Store the token in the service
+        this.userType = response.userType;
+        localStorage.setItem('token', this.token); 
+        localStorage.setItem('userType', this.userType); 
+      }),
+      catchError(this.handleError)
+    );
   }
-  register(userData: any): Observable<any> {
+
+  register(userData: { email: string; password: string; firstName: string; lastName: string; userType: string }): Observable<any> {
     const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
-    return this.http.post(REGISTER_URL, userData, { headers });
+    return this.http.post(`${this.apiUrl}/register`, userData, { headers }).pipe(
+      catchError(this.handleError)
+    );
   }
+
+  logoutUser(): void {
+    this.token = null; 
+    localStorage.removeItem('token'); 
+  }
+
+  getToken(): string | null {
+    return this.token;
+  }
+
   private handleError(error: any) {
     let errorMessage = '';
     if (error.error instanceof ErrorEvent) {
-      
       errorMessage = 'An error occurred: ' + error.error.message;
     } else {
       errorMessage = `Backend returned code ${error.status}: ${error.body.message}`;
     }
-    return throwError(errorMessage); // Rethrow the error with a user-friendly message
+    return throwError(errorMessage);
   }
 }

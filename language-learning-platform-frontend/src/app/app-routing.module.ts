@@ -8,6 +8,11 @@ import { AppLearningMaterialsComponent } from './app-learning-materials/app-lear
 import { AppLanguageAssessmentsComponent } from './app-language-assessments/app-language-assessments.component';
 import { AppProgressTrackingComponent } from './app-progress-tracking/app-progress-tracking.component';
 import { AppChallengesGamesComponent } from './app-challenges-games/app-challenges-games.component';
+import { CreateAssessmentComponent } from './create-assessment/create-assessment.component';
+import { ViewAssessmentsComponent } from './view-assessments/view-assessments.component';
+import { CreateChallengeComponent } from './create-challenge/create-challenge.component';
+import { ViewLeaderboardComponent } from './view-leaderboard/view-leaderboard.component';
+import { ViewChallengesComponent } from './view-challenges/view-challenges.component';
 
 const routes: Routes = [
   { path: '', component: LoginComponent },
@@ -18,7 +23,11 @@ const routes: Routes = [
   { path: 'language-assessments', component: AppLanguageAssessmentsComponent },
   { path: 'progress-tracking', component: AppProgressTrackingComponent },
   { path: 'challenges-games', component: AppChallengesGamesComponent },
-  // Add other routes for your application
+  { path: 'create-assessment', component: CreateAssessmentComponent },
+  { path: 'view-assessments', component: ViewAssessmentsComponent },
+  { path: 'create-challenge', component: CreateChallengeComponent },
+  { path: 'view-challenges', component: ViewChallengesComponent },
+  { path: 'view-leaderboard/:challengeId', component: ViewLeaderboardComponent },
   { path: '', redirectTo: '/login', pathMatch: 'full' }
 ];
 

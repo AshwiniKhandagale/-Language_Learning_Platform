@@ -23,11 +23,11 @@ export class AppLanguageSelectionComponent implements OnInit {
         this.languages = languages;
         
       });
-      this.languageService.getselectedLanguages()
-      .subscribe(languages => {
-        this.selectedLanguages = languages;
+      // this.languageService.getselectedLanguages()
+      // .subscribe(languages => {
+      //   this.selectedLanguages = languages;
         
-      });
+      // });
       this.languageForm = this.formBuilder.group({
         name: ['', Validators.required],
         level: ['', Validators.required]

@@ -87,15 +87,19 @@
       "password": "12345"
     },
     {
-<<<<<<< Updated upstream
       "id": "fbb9",
       "username": "ash",
       "password": "123456"
-=======
-      "id": "6d5d",
+    },
+    {
+      "id": "ff4f",
       "username": "akhandagale",
       "password": "12345"
->>>>>>> Stashed changes
+    },
+    {
+      "id": "aa3c",
+      "username": "akhandagale",
+      "password": "12345"
     }
   ],
   "languages": [
@@ -265,6 +269,84 @@
       "id": "c0d5",
       "language": "Hindi",
       "level": "Intermediate"
+    }
+  ],
+  "learning-materials": [
+    {
+      "language_id": "b493c87b-c592-4980-91dd-5e79306af0a3",
+      "content_type": "text",
+      "content": [
+        {
+          "base_word": "hello",
+          "foreign_word": "hola",
+          "creator_id": "29ebc24c-6286-40ab-aec6-2107c6e445e2",
+          "difficulty_level": "beginner",
+          "weightage": 1
+        },
+        {
+          "base_word": "goodbye",
+          "foreign_word": "adiós",
+          "creator_id": "29ebc24c-6286-40ab-aec6-2107c6e445e2",
+          "difficulty_level": "beginner",
+          "weightage": 1
+        },
+        {
+          "base_word": "please",
+          "foreign_word": "por favor",
+          "creator_id": "29ebc24c-6286-40ab-aec6-2107c6e445e2",
+          "difficulty_level": "beginner",
+          "weightage": 1
+        },
+        {
+          "base_word": "thank you",
+          "foreign_word": "gracias",
+          "creator_id": "29ebc24c-6286-40ab-aec6-2107c6e445e2",
+          "difficulty_level": "intermediate",
+          "weightage": 1
+        },
+        {
+          "base_word": "yes",
+          "foreign_word": "sí",
+          "creator_id": "29ebc24c-6286-40ab-aec6-2107c6e445e2",
+          "difficulty_level": "intermediate",
+          "weightage": 1
+        },
+        {
+          "base_word": "no",
+          "foreign_word": "no",
+          "creator_id": "29ebc24c-6286-40ab-aec6-2107c6e445e2",
+          "difficulty_level": "intermediate",
+          "weightage": 1
+        },
+        {
+          "base_word": "sorry",
+          "foreign_word": "lo siento",
+          "creator_id": "29ebc24c-6286-40ab-aec6-2107c6e445e2",
+          "difficulty_level": "advanced",
+          "weightage": 1
+        },
+        {
+          "base_word": "excuse me",
+          "foreign_word": "perdón",
+          "creator_id": "29ebc24c-6286-40ab-aec6-2107c6e445e2",
+          "difficulty_level": "advanced",
+          "weightage": 1
+        },
+        {
+          "base_word": "I love you",
+          "foreign_word": "te amo",
+          "creator_id": "29ebc24c-6286-40ab-aec6-2107c6e445e2",
+          "difficulty_level": "advanced",
+          "weightage": 1
+        },
+        {
+          "base_word": "beautiful",
+          "foreign_word": "hermoso/hermosa",
+          "creator_id": "29ebc24c-6286-40ab-aec6-2107c6e445e2",
+          "difficulty_level": "advanced",
+          "weightage": 1
+        }
+      ]
     }
   ]
 }
